@@ -60,7 +60,7 @@ export default function Footer() {
               : "bg-white text-black/80 border"
           }`}
         >
-          {details.autoTrades ? (
+          {/* {details.autoTrades ? (
             <div className="flex items-center text-sm bg-gren-100 order px-4">
               <div className="auto-trade-text font-bold text-700 py-3">
                 Auto-Trade:
@@ -102,7 +102,7 @@ export default function Footer() {
                 </svg>
               </div>
             </div>
-          )}
+          )} */}
 
           <div className="md:flex items-center text-sm bg-bue-50 hidden  px-4">
             <div className="auto-trade-text font-bold text-700 py-3">
@@ -114,7 +114,6 @@ export default function Footer() {
                   {details !== 0
                     ? details.tradingBalance.toLocaleString()
                     : "0"}
-                  .00
                 </code>
               </p>
             </div>
