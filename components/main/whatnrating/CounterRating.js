@@ -52,7 +52,7 @@ export default function CounterRating() {
                 className="font-extrabold"
                 enableScrollSpy
               />
-              <span className="font-extrabold text-ed-700">K+</span>
+              <span className="font-extrabold text-ed-700">M+</span>
             </div>
             <div
               className={`count-res uppercase text-sm font-bld ${
@@ -96,12 +96,12 @@ export default function CounterRating() {
             </div>
             <div className={`text-count my-3 font-bold text-xl`}>
               <CountUp
-                end={127}
+                end={505}
                 duration={10}
                 enableScrollSpy
                 className="font-extrabold"
               />
-              <spzn className="font-extrabold text-gren-700">K+</spzn>
+              <spzn className="font-extrabold text-gren-700">M+</spzn>
             </div>
             <div
               className={`count-res uppercase text-sm font-bld ${
@@ -140,7 +140,7 @@ export default function CounterRating() {
             </div>
             <div className={`text-count my-3 font-bold text-xl`}>
               <CountUp
-                end={2017}
+                end={2007}
                 start={1960}
                 duration={8}
                 className="font-extrabold"

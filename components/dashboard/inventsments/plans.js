@@ -15,6 +15,8 @@ export const investmentPlans = [
     image: "/assets/premiumm.png",
     min: 65000.0,
     max: 90000.0,
+    minRoi: 162000.0,
+    maxRoi: 220000.0,
   },
   {
     package: "gold plan",
@@ -32,6 +34,8 @@ export const investmentPlans = [
     image: "/assets/gold.png",
     min: 15000.0,
     max: 22000.0,
+    minRoi: 63000.0,
+    maxRoi: 82000.0,
   },
   {
     package: "silver plan",
@@ -49,6 +53,8 @@ export const investmentPlans = [
     image: "/assets/silverr.png",
     min: 5000.0,
     max: 9000.0,
+    minRoi: 47000.0,
+    maxRoi: 56000.0,
   },
   {
     package: "bronze plan",
@@ -65,5 +71,7 @@ export const investmentPlans = [
     image: "/assets/bronze.png",
     min: 1000.0,
     max: 3000.0,
+    minRoi: 12000.0,
+    maxRoi: 31000.0,
   },
 ];
