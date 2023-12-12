@@ -143,36 +143,9 @@ export default function Dash() {
       ),
     },
   ];
-  useEffect(() => {
-    if (details !== 0) {
-      if (details?.tradingBalance === 0) {
-        toast({
-          variant: "default",
-          duration: 20000,
-          className: isDarkMode
-            ? "bg-[#111] text-white border border-white/10 top-0 md:right-0 md:fixed md:w-[400px] md:mt-5 md:mr-5"
-            : "bg-white text-black top-0 md:right-0 md:fixed md:w-[400px] md:mt-5 md:mr-5",
-          title: "No or Low trading balance??",
-          description:
-            "Why not get started by making a deposit to enjoy all trading benefits",
-          action: (
-            <ToastAction
-              altText="Deposit"
-              className={`font-bold bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] h-11 border-0/  from-red-800 via-red-600 to-orange-500 text-white`}
-            >
-              <Link href="/dashboard/deposits" passHref>
-                Deposit
-              </Link>
-            </ToastAction>
-          ),
-        });
-      }
-    }
-  }, []);
+
   return (
     <div>
-      {" "}
-      <Toaster />
       <div
         className={`dash-cont p-4 relative ${
           isDarkMode ? `${baseColor}` : ""
@@ -331,7 +304,7 @@ export default function Dash() {
                       <p className="hidden md:block">Withdraw</p>
                     </div>
                   </Link>
-                  <Link href="dashboard/deposits" passHref>
+                  {/* <Link href="dashboard/deposits" passHref>
                     {" "}
                     <div className="mx-1 bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-red-700 via-red-600 to-orange-500 text-white flex font-bold text-xs items-center cursor-pointer md:px-4 md:py-3 p-3 rounded-full md:rounded-lg">
                       <svg
@@ -348,7 +321,7 @@ export default function Dash() {
                       </svg>
                       <p className="hidden md:block">Deposit</p>
                     </div>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

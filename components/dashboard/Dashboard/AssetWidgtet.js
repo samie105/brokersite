@@ -12,14 +12,14 @@ export default function AssetWidgtet() {
         <h2 className={`text-lg font-bold ${isDarkMode ? "text-white" : ""}`}>
           My Assets
         </h2>
-        <Link href="dashboard/deposits" passHref>
+        {/* <Link href="dashboard/deposits" passHref>
           {" "}
           <div>
             <button className="bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-red-800 via-red-600 to-orange-500 rounded-full py-3 px-5 text-white font-bold text-xs md:text-sm">
               Deposit
             </button>
           </div>
-        </Link>
+        </Link> */}
       </div>
       <MarketOverview
         widgetPropsAny={{
