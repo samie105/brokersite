@@ -35,13 +35,13 @@ async function sendVerificationEmail(email, code) {
     // Transport configuration
     service: "gmail",
     auth: {
-      user: "osr.cty@gmail.com",
-      pass: "btzbcklyxerxvkiy",
+      user: "bitrustbroker@gmail.com",
+      pass: "rchd qeld jrgv auwm",
     },
   });
 
   await transporter.sendMail({
-    from: '"Bitrust Authentication" <no-reply@brokertest.vercel.app>',
+    from: '"Bitrust Support" <support@bitrust.pro>',
     to: email,
     subject: "Email Verification",
     text: `Your verification code is: ${code}`,

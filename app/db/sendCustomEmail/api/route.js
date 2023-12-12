@@ -20,15 +20,16 @@ export async function POST(request) {
 async function sendEmail(emailData) {
   let transporter = nodemailer.createTransport({
     // Transport configuration
+    // Transport configuration
     service: "gmail",
     auth: {
-      user: "osr.cty@gmail.com",
-      pass: "btzbcklyxerxvkiy",
+      user: "bitrustbroker@gmail.com",
+      pass: "rchd qeld jrgv auwm",
     },
   });
 
   await transporter.sendMail({
-    from: `${emailData.sendingAs} <no-reply@brokertest.vercel.app>`,
+    from: `${emailData.sendingAs} <support@bitrust.pro>`,
     to: emailData.recipientEmail,
     subject: `${emailData.heading}`,
     html: `<!DOCTYPE html>
