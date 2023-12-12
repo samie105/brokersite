@@ -378,7 +378,7 @@ export default function Nav() {
                   {notifications.length !== 0 && (
                     <>
                       <div>
-                        <ScrollArea className=" max-h-[300px] overflow-scroll overflow-x-hidden w-full px-3 py-3">
+                        <div className=" max-h-[300px] overflow-scroll overflow-x-hidden w-full px-3 py-3">
                           {sortedNotifications.reverse().map((notif, index) => (
                             <>
                               <div
@@ -531,7 +531,7 @@ export default function Nav() {
                               </div>
                             </>
                           ))}
-                        </ScrollArea>
+                        </div>
                       </div>
                     </>
                   )}
@@ -621,7 +621,7 @@ export default function Nav() {
                       <p className="pt-2">Profile</p>
                     </div>
                   </Link>
-                  <Link href="/dashboard/deposits" passHref>
+                  <Link href="/dashboard/markets" passHref>
                     <div
                       className={`deposit flex flex-col items-center text-xs justify-center rounded-md font-bold p-3  ${
                         isDarkMode
@@ -636,7 +636,7 @@ export default function Nav() {
                         width={1000}
                         height={1000}
                       />
-                      <p className="pt-2">Deposit</p>
+                      <p className="pt-2">Markets</p>
                     </div>
                   </Link>
                   <Link href="/dashboard/withdrawals" passHref>

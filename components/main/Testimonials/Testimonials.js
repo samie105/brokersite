@@ -120,11 +120,8 @@ export default function Testimonials() {
               }  p-5 rounded-xl mx-2 my-2`}
             >
               <div className="card-brand mb-4">
-                <div className="icon-container text-blue-300 flex items-center font-bold ">
-                  <div className=" mr-2">
-                    <FontAwesomeIcon icon={faTwitter} className="w-4 h-4" />
-                  </div>
-                  <p>Twitter</p>
+                <div className="icon-container flex items-center font-bold ">
+                  <p>Testimony One</p>
                 </div>
               </div>
               <div className="card-body text-sm">
@@ -135,10 +132,12 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  I can't thank capital nexus enough for their outstanding
-                  service. From the moment I signed up, they have provided
-                  exceptional support and guidance. Their platform is intuitive
-                  and packed with powerful and experiences
+                  Bitrust has been an invaluable partner in helping me manage my
+                  finances and investments. Their team of talented and
+                  knowledgeable professionals have prepared top-notch plans and
+                  given me the assurance that my financial future is in great
+                  hands. I'd highly recommend them to anyone looking for an
+                  experienced financial planning service.
                   <sup>
                     <FontAwesomeIcon
                       icon={faQuoteRight}
@@ -160,8 +159,8 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
-                  <div className="name mb-1">Nelly Aran</div>
-                  <div className="desc">Candle Forecasts at Inksquare</div>
+                  <div className="name mb-1">Hannah Gray</div>
+                  <div className="desc">- Canada -</div>
                 </div>
               </div>
             </div>
@@ -175,11 +174,8 @@ export default function Testimonials() {
               }  p-5 rounded-xl mx-2 my-2`}
             >
               <div className="card-brand mb-4">
-                <div className="icon-container text-blue-700 flex items-center font-bold ">
-                  <div className=" mr-2">
-                    <FontAwesomeIcon icon={faFacebook} className="w-4 h-4" />
-                  </div>
-                  <p>Facebook</p>
+                <div className="icon-container  flex items-center font-bold ">
+                  <p>Testimony Two</p>
                 </div>
               </div>
               <div className="card-body text-sm">
@@ -190,10 +186,12 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  Choosing capital nexus was a game-changer for me. Their
-                  dedication to customer satisfaction is unmatched. Whenever I
-                  have a question or need assistance, their support team is
-                  always there to help.{" "}
+                  I was looking for a reliable financial planner and I found
+                  Bitrust. They have provided me with great advice and trading
+                  during the entire process to help me achieve my financial
+                  goals. Their customer service has been outstanding, and I
+                  would highly recommend them to anyone looking for a top-notch
+                  financial planning firm.{" "}
                   <sup>
                     <FontAwesomeIcon
                       icon={faQuoteRight}
@@ -215,8 +213,8 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
-                  <div className="name mb-1">Da Silva P. Viera</div>
-                  <div className="desc">Indicator Analyst at Voce-Bulls</div>
+                  <div className="name mb-1">Heidi Roth</div>
+                  <div className="desc">- Germany -</div>
                 </div>
               </div>
             </div>
@@ -230,11 +228,8 @@ export default function Testimonials() {
               }  p-5 rounded-xl mx-2 my-2`}
             >
               <div className="card-brand mb-4">
-                <div className="icon-container text-blue-700 flex items-center font-bold ">
-                  <div className=" mr-2">
-                    <FontAwesomeIcon icon={faFacebook} className="w-4 h-4" />
-                  </div>
-                  <p>Facebook</p>
+                <div className="icon-container flex items-center font-bold ">
+                  <p>Testimony Three</p>
                 </div>
               </div>
               <div className="card-body text-sm">
@@ -245,10 +240,11 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  Trading with capital nexus has been a game-changer for my
-                  investment portfolio. Their user-friendly platform and
-                  extensive range of financial instruments have allowed me to
-                  diversify my trading strategies effectively{" "}
+                  Bitrust is an excellent and user friendly trading/investment
+                  platform and I highly recommend them. Their team is
+                  well-informed, reliable and highly professional. I have had
+                  nothing but positive experiences working with them and I
+                  couldn't be happier with the results.{" "}
                   <sup>
                     <FontAwesomeIcon
                       icon={faQuoteRight}
@@ -270,8 +266,8 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
-                  <div className="name mb-1">Dimitri Paulo</div>
-                  <div className="desc">Account Manager at Greece Chart'Rs</div>
+                  <div className="name mb-1">Carlo Francescoo</div>
+                  <div className="desc">- Italy -</div>
                 </div>
               </div>
             </div>
@@ -285,11 +281,8 @@ export default function Testimonials() {
               }  p-5 rounded-xl mx-2 my-2`}
             >
               <div className="card-brand mb-4">
-                <div className="icon-container flex items-center text-orange-700 font-bold ">
-                  <div className=" mr-2">
-                    <FontAwesomeIcon icon={faReddit} className="w-4 h-4" />
-                  </div>
-                  <p>Reddit</p>
+                <div className="icon-container flex items-center0 font-bold ">
+                  <p>Testimony Four</p>
                 </div>
               </div>
               <div className="card-body text-sm">
@@ -300,10 +293,10 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  I have been a loyal client of capital nexus for several years,
-                  and I have never been disappointed. Their professionalism,
-                  reliability, and personalized approach have made them my go-to
-                  choice anytime.{" "}
+                  Bitrust is a game changer! Their experienced traders have
+                  helped me make informed decisions and grow my portfolio. I'm
+                  grateful for their expertise and highly recommend them to
+                  anyone looking to invest in cryptocurrency. .{" "}
                   <sup>
                     <FontAwesomeIcon
                       icon={faQuoteRight}
@@ -325,8 +318,8 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
-                  <div className="name mb-1">Murat Isik</div>
-                  <div className="desc">Personal Trader</div>
+                  <div className="name mb-1">Sean Fischer</div>
+                  <div className="desc">- U.S.A -</div>
                 </div>
               </div>
             </div>
