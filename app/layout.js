@@ -13,7 +13,7 @@ import { ThemeProvider } from "../contexts/themeContext";
 const font = Poppins({ subsets: ["latin"], weight: ["300"] });
 
 export const metadata = {
-  title: "Capital Nexus | Best Digital Currency Platform ",
+  title: "Bitrust | Best Digital Currency Platform ",
   description:
     "A broker site with thousands of stock leading the way in the world of trading",
 };

@@ -15,7 +15,7 @@ export async function POST(request) {
 
   // Define the email content
   const mailOptions = {
-    from: '"Capital Nexus Team" <no-reply@brokertest.vercel.app>',
+    from: '"Bitrust Team" <no-reply@brokertest.vercel.app>',
     to: email, // Recipient's email address
     subject: "Deposit Confirmation",
     html: `

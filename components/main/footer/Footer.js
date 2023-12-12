@@ -33,9 +33,9 @@ export default function Footer() {
               </svg>
             </section>
             <section className="broker-writeup text-sm text-gray-400  ">
-              Capital Nexus is a financial investment company established by a
-              group of professional traders and investors, who have fore seen
-              the future of International Capital Market. The company has direct
+              Bitrust is a financial investment company established by a group
+              of professional traders and investors, who have fore seen the
+              future of International Capital Market. The company has direct
               contracts with professional traders and miners around the world
               that guarantees the best services and ensures profits are made and
               remitted to investors daily.
@@ -184,7 +184,7 @@ export default function Footer() {
                     E-mail Contact
                   </div>
                   <div className="phone text-gray-400 my-1 text-sm">
-                    team@capitalnexus.com
+                    support@bitrust.pro
                   </div>
                 </div>
               </section>
@@ -228,7 +228,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-message py-4 flex justify-center text-gray-400 bg-[#0a0a0a] text-xs md:text-base">
-        © 2023 capitalnexus.com All Rights Reserved.
+        © 2023 Bitrust.pro All Rights Reserved.
       </div>
     </>
   );
