@@ -28,6 +28,9 @@ export default function UserDeets({ data }) {
   const [totalLoss, setTotalLoss] = useState("");
   const [lastProfit, setLastProfit] = useState("");
   const [planBonus, setPlanBonus] = useState("");
+  const [profit, setProfit] = useState("");
+  const [totalPackages, setTotalPackages] = useState("");
+  const [activePackages, setActivePackages] = useState("");
   const [investmentPackage, setInvestmentPackage] = useState("");
   const [loading, isloading] = useState(false);
 
@@ -60,6 +63,9 @@ export default function UserDeets({ data }) {
         lastProfit,
         investmentPackage,
         planBonus,
+        profit,
+        totalPackages,
+        activePackages,
       });
       if (response.status === 200) {
         setFormSubmitted(true);
@@ -100,6 +106,9 @@ export default function UserDeets({ data }) {
         setLastProfit(fetchedDetails.lastProfit);
         setPlanBonus(fetchedDetails.planBonus);
         setInvestmentPackage(fetchedDetails.investmentPackage);
+        setProfit(fetchedDetails.profit);
+        setActivePackages(fetchedDetails.activePackages);
+        setTotalPackages(fetchedDetails.totalPackages);
       } catch (err) {
         // Handle any errors that occur during the request
         console.error("Error fetching user details:", err);
@@ -427,6 +436,54 @@ export default function UserDeets({ data }) {
                     id="investmentPackage"
                     value={lastProfit}
                     onChange={(e) => setLastProfit(e.target.value)}
+                    placeholder="Enter investment package"
+                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
+                  />
+                </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <label
+                    htmlFor="profit"
+                    className="block text-sm font-bold text-gray-700"
+                  >
+                    Profit
+                  </label>
+                  <input
+                    type="text"
+                    id="profit"
+                    value={profit}
+                    onChange={(e) => setProfit(e.target.value)}
+                    placeholder="Enter investment package"
+                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
+                  />
+                </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <label
+                    htmlFor="activePages"
+                    className="block text-sm font-bold text-gray-700"
+                  >
+                    Active Packages
+                  </label>
+                  <input
+                    type="text"
+                    id="activePages"
+                    value={activePackages}
+                    onChange={(e) => setActivePackages(e.target.value)}
+                    placeholder="Enter investment package"
+                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
+                  />
+                </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <label
+                    htmlFor="tp"
+                    className="block text-sm font-bold text-gray-700"
+                  >
+                    Total Packages
+                  </label>
+                  <input
+                    type="text"
+                    id="tp"
+                    value={totalPackages}
+                    onChange={(e) => setTotalPackages(e.target.value)}
                     placeholder="Enter investment package"
                     className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
                   />

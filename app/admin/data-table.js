@@ -183,11 +183,11 @@ export function DataTableDemo({ data, setData }) {
                   Edit User Details
                 </DropdownMenuItem>
               </Link>
-              <Link href={`/admin/history/deposit/${payment.email}`} passHref>
+              {/* <Link href={`/admin/history/deposit/${payment.email}`} passHref>
                 <DropdownMenuItem className="py-3">
                   View Deposit History
                 </DropdownMenuItem>
-              </Link>
+              </Link> */}
               <Link
                 href={`/admin/custom-emails/${payment.email}`}
                 passHref

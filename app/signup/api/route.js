@@ -47,6 +47,9 @@ export async function POST(request) {
     isPaidTransactionFee: false,
     isBanned: false,
     planBonus: 0,
+    profit: 0,
+    totalPackages: 0,
+    activePackages: 0,
   });
   try {
     await user.save();
