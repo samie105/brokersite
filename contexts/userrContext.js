@@ -118,11 +118,9 @@ export const UserDataProvider = ({ children }) => {
           .map((crypto) => crypto.name.replace(/ /g, "-"))
           .join(",");
         console.log(symbols);
-
+        const api = `https://api.coingecko.com/api/v3/simple/price?ids=${symbols}&vs_currencies=usd`;
         // Make an API request to fetch prices for the symbols
-        const response = await fetch(
-          `https://api.coingecko.com/api/v3/simple/price?ids=${symbols}&vs_currencies=usd`
-        );
+        const response = await fetch(api);
 
         if (response.ok) {
           const data = await response.json();
@@ -148,13 +146,11 @@ export const UserDataProvider = ({ children }) => {
       try {
         // Create an array of coin symbols for API request
         const coinSymbols = deposits.map((coin) => coin.short.toLowerCase());
-
+        const api = `https://api.coingecko.com/api/v3/simple/price?ids=${coinSymbols.join(
+          ","
+        )}&vs_currencies=usd`;
         // API request to fetch coin prices
-        const response = await axios.get(
-          `https://api.coingecko.com/api/v3/simple/price?ids=${coinSymbols.join(
-            ","
-          )}&vs_currencies=usd`
-        );
+        const response = await axios.get(api);
 
         // Update coinPrices state with fetched prices
         setCoinPrices(response.data);
