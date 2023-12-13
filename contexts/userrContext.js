@@ -49,119 +49,119 @@ export const UserDataProvider = ({ children }) => {
       address: "0Xxiohxhihfookhijkhnofwefodsdhfodhod",
     },
   ];
-  useEffect(() => {
-    const fetchStockPrices = async () => {
-      try {
-        // Create an array of unique symbols from stocks, join them and convert to uppercase
-        // Make a single API request to fetch prices for all symbols using Polygon.io
-        const response = await axios.get(
-          `https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/2023-01-09?adjusted=true&apiKey=uBHWmV9nY9dXSxbrZJ8iiuFrcHsEiHED`
-        );
-        console.log(response);
-        if (
-          response.data &&
-          response.data.status === "OK" &&
-          response.data.results
-        ) {
-          const stockData = response.data.results;
-          const priceData = {};
+  // useEffect(() => {
+  //   const fetchStockPrices = async () => {
+  //     try {
+  //       // Create an array of unique symbols from stocks, join them and convert to uppercase
+  //       // Make a single API request to fetch prices for all symbols using Polygon.io
+  //       const response = await axios.get(
+  //         `https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/2023-01-09?adjusted=true&apiKey=uBHWmV9nY9dXSxbrZJ8iiuFrcHsEiHED`
+  //       );
+  //       console.log(response);
+  //       if (
+  //         response.data &&
+  //         response.data.status === "OK" &&
+  //         response.data.results
+  //       ) {
+  //         const stockData = response.data.results;
+  //         const priceData = {};
 
-          stockData.forEach((stock) => {
-            priceData[stock.T] = stock.c;
-          });
+  //         stockData.forEach((stock) => {
+  //           priceData[stock.T] = stock.c;
+  //         });
 
-          setStockPrices(priceData);
-        }
-      } catch (error) {
-        console.error("Error fetching stock prices:", error);
-      }
-    };
+  //         setStockPrices(priceData);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching stock prices:", error);
+  //     }
+  //   };
 
-    fetchStockPrices();
-  }, []);
-  useEffect(() => {
-    const fetchStockPrices = async () => {
-      try {
-        // Create an array of unique symbols from stocks, join them and convert to uppercase
-        // Make a single API request to fetch prices for all symbols using Polygon.io
-        const response = await axios.get(
-          `https://api.polygon.io/v2/aggs/grouped/locale/global/market/fx/2023-01-09?adjusted=true&apiKey=uBHWmV9nY9dXSxbrZJ8iiuFrcHsEiHED`
-        );
-        console.log(response);
-        if (
-          response.data &&
-          response.data.status === "OK" &&
-          response.data.results
-        ) {
-          const stockData = response.data.results;
-          const priceData = {};
+  //   fetchStockPrices();
+  // }, []);
+  // useEffect(() => {
+  //   const fetchStockPrices = async () => {
+  //     try {
+  //       // Create an array of unique symbols from stocks, join them and convert to uppercase
+  //       // Make a single API request to fetch prices for all symbols using Polygon.io
+  //       const response = await axios.get(
+  //         `https://api.polygon.io/v2/aggs/grouped/locale/global/market/fx/2023-01-09?adjusted=true&apiKey=uBHWmV9nY9dXSxbrZJ8iiuFrcHsEiHED`
+  //       );
+  //       console.log(response);
+  //       if (
+  //         response.data &&
+  //         response.data.status === "OK" &&
+  //         response.data.results
+  //       ) {
+  //         const stockData = response.data.results;
+  //         const priceData = {};
 
-          stockData.forEach((stock) => {
-            priceData[stock.T] = stock.c;
-          });
+  //         stockData.forEach((stock) => {
+  //           priceData[stock.T] = stock.c;
+  //         });
 
-          setCurrencyPrices(priceData);
-        }
-      } catch (error) {
-        console.error("Error fetching stock prices:", error);
-      }
-    };
+  //         setCurrencyPrices(priceData);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching stock prices:", error);
+  //     }
+  //   };
 
-    fetchStockPrices();
-  }, []);
-  useEffect(() => {
-    // Function to fetch cryptocurrency prices and update state
-    const fetchCryptoPrices = async () => {
-      try {
-        // Create an array of unique symbols from cryptos, join them and convert to lowercase
-        const symbols = cryptos
-          .map((crypto) => crypto.name.replace(/ /g, "-"))
-          .join(",");
-        console.log(symbols);
-        const api = `https://api.coingecko.com/api/v3/simple/price?ids=${symbols}&vs_currencies=usd`;
-        // Make an API request to fetch prices for the symbols
-        const response = await fetch(api);
+  //   fetchStockPrices();
+  // }, []);
+  // useEffect(() => {
+  //   // Function to fetch cryptocurrency prices and update state
+  //   const fetchCryptoPrices = async () => {
+  //     try {
+  //       // Create an array of unique symbols from cryptos, join them and convert to lowercase
+  //       const symbols = cryptos
+  //         .map((crypto) => crypto.name.replace(/ /g, "-"))
+  //         .join(",");
+  //       console.log(symbols);
+  //       const api = `https://api.coingecko.com/api/v3/simple/price?ids=${symbols}&vs_currencies=usd`;
+  //       // Make an API request to fetch prices for the symbols
+  //       const response = await fetch(api);
 
-        if (response.ok) {
-          const data = await response.json();
-          setCryptoPrices(data);
-          console.log(data);
-        }
-      } catch (error) {
-        console.error("Error fetching cryptocurrency prices:", error);
-      }
-    };
+  //       if (response.ok) {
+  //         const data = await response.json();
+  //         setCryptoPrices(data);
+  //         console.log(data);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching cryptocurrency prices:", error);
+  //     }
+  //   };
 
-    // Call the function to fetch prices on component mount
-    fetchCryptoPrices();
-  }, []); // The empty dependency array ensures the effect runs once on mount
+  //   // Call the function to fetch prices on component mount
+  //   fetchCryptoPrices();
+  // }, []); // The empty dependency array ensures the effect runs once on mount
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("defaultOpen", defaultOpen.toString());
-    }
-  }, [defaultOpen]);
-  useEffect(() => {
-    const fetchCoinPrices = async () => {
-      try {
-        // Create an array of coin symbols for API request
-        const coinSymbols = deposits.map((coin) => coin.short.toLowerCase());
-        const api = `https://api.coingecko.com/api/v3/simple/price?ids=${coinSymbols.join(
-          ","
-        )}&vs_currencies=usd`;
-        // API request to fetch coin prices
-        const response = await axios.get(api);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     window.localStorage.setItem("defaultOpen", defaultOpen.toString());
+  //   }
+  // }, [defaultOpen]);
+  // useEffect(() => {
+  //   const fetchCoinPrices = async () => {
+  //     try {
+  //       // Create an array of coin symbols for API request
+  //       const coinSymbols = deposits.map((coin) => coin.short.toLowerCase());
+  //       const api = `https://api.coingecko.com/api/v3/simple/price?ids=${coinSymbols.join(
+  //         ","
+  //       )}&vs_currencies=usd`;
+  //       // API request to fetch coin prices
+  //       const response = await axios.get(api);
 
-        // Update coinPrices state with fetched prices
-        setCoinPrices(response.data);
-      } catch (error) {
-        console.error("Error fetching coin prices:", error);
-      }
-    };
+  //       // Update coinPrices state with fetched prices
+  //       setCoinPrices(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching coin prices:", error);
+  //     }
+  //   };
 
-    fetchCoinPrices();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  //   fetchCoinPrices();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   useEffect(() => {
     if (selectedMethod) {

@@ -3,8 +3,8 @@ import DepwBank from "./DepwBank";
 export default function Deposit() {
   return (
     <>
-      <DepwCrypto />
-      <DepwBank />
+      {/* <DepwCrypto />
+      <DepwBank /> */}
     </>
   );
 }
