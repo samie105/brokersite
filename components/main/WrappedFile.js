@@ -8,6 +8,7 @@ import Sponsors from "./sponsors/Sponsors";
 import AboutUs from "./AboutUs/AboutUs";
 import Wcy from "./whyUs/Wcy";
 import Testimonials from "./Testimonials/Testimonials";
+import Gateways from "./Gateways/Gateways";
 import FAQ from "./Faq/FAQ";
 import Footer from "./footer/Footer";
 import Commodities from "./commodities/Commodities";
@@ -55,6 +56,7 @@ export default function WrappedFile() {
         <Wcy />
         <CT />
         <Sponsors />
+        <Gateways />
         <Testimonials />
         <FAQ />
         <Footer />
