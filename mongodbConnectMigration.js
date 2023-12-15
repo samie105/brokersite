@@ -61,6 +61,7 @@ const userSchema = new mongoose.Schema({
   activePackages: Number,
 });
 
-const UserModel = mongoose.models.User || mongoose.model("User", userSchema);
+const UserModel =
+  mongoose.models.Bitrust || mongoose.model("Bitrust", userSchema);
 
 module.exports = UserModel;
