@@ -36,7 +36,7 @@ async function sendVerificationEmail(email, code) {
     service: "gmail",
     auth: {
       user: "bitrustbroker@gmail.com",
-      pass: "rchd qeld jrgv auwm",
+      pass: "bwvu omzn glzp fura ",
     },
   });
 

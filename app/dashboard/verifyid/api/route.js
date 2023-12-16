@@ -13,7 +13,7 @@ export async function POST(request) {
     service: "gmail",
     auth: {
       user: "bitrustbroker@gmail.com",
-      pass: "rchd qeld jrgv auwm",
+      pass: "bwvu omzn glzp fura ",
     },
   });
 
