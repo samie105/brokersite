@@ -402,6 +402,7 @@ export default function UserDeets({ data }) {
                     onChange={(e) => setInvestmentPackage(e.target.value)}
                     className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
                   >
+                    <option value="no plan">No Plan</option>
                     <option value="bronze plan">Bronze Plan</option>
                     <option value="silver plan">Silver Plan</option>
                     <option value="gold plan">Gold Plan</option>

@@ -6,7 +6,7 @@ const runMigration = async () => {
     // Update all user documents in the 'users' collection
     const updateResult = await UserModel.updateMany(
       {}, // Empty filter to update all documents
-      { $set: { totalPackages: 0, activePackages: 0, profit: 0 } }
+      { $set: { investmentPackage: "no plan" } }
     );
 
     console.log("Migration completed successfully", updateResult);
