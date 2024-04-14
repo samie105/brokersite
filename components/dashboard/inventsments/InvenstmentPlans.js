@@ -56,10 +56,10 @@ export default function InvestmentPlans() {
     try {
       if (details.tradingBalance > min) {
         // Make an API request to purchase the plan
-        const response = await axios.post("/plan/api", { plan, email });
+        // const response = await axios.post("/plan/api", { plan, email });
 
         // Check if the purchase was successful (you may need to adjust this based on your API response)
-        if (response.data.success) {
+        if (false) {
           setDetails((prevDetails) => ({
             ...prevDetails,
 
@@ -92,7 +92,7 @@ export default function InvestmentPlans() {
 
           // Notify the user of the error
           setNotification(
-            ` Your ${plan} purchase was declined due to an error. Please try again later.`,
+            ` Your ${plan} purchase was declined due to an error. Please contact support.`,
             "transaction",
             "failure"
           );
@@ -287,7 +287,7 @@ export default function InvestmentPlans() {
             </div>
             {planErrors[index] && (
               <div className="text-sm text-red-500 w-full text-center">
-                Insufficient Balance to activate this plan.{" "}
+                You can't purchase this plan. contact support{" "}
                 <span className="font-bold">
                   <Link href="/dashboard/deposits">Deposit now</Link>
                 </span>
