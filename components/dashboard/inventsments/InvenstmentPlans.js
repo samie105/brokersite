@@ -287,7 +287,7 @@ export default function InvestmentPlans() {
             </div>
             {planErrors[index] && (
               <div className="text-sm text-red-500 w-full text-center">
-                You can't purchase this plan. contact support{" "}
+                You can not purchase this plan. contact support{" "}
                 <span className="font-bold">
                   <Link href="/dashboard/deposits">Deposit now</Link>
                 </span>
