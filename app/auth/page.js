@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <Script
-        src="//code.tidio.co/dps3dblmdrpv4ifvmxhasckkruwjlwas.js"
+        src="//code.tidio.co/jyhjmelwmkvmy0smnznzsnvuwlzose8s.js"
         async
       ></Script>
       <GoogleTranslate isDarkMode={isDarkMode} />
