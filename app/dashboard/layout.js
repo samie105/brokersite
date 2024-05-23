@@ -51,7 +51,7 @@ export default function Layout({ children }) {
   return (
     <UserDataProvider>
       <Script
-        src="//code.tidio.co/jyhjmelwmkvmy0smnznzsnvuwlzose8s.js"
+        src="//code.tidio.co/mnccv3gt47gdfzv2zyup3gpqu1vqfacp.js"
         async
       ></Script>
       <GoogleTranslate isDarkMode={isDarkMode} />
