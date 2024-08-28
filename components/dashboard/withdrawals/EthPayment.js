@@ -10,12 +10,12 @@ import { Input } from "../../ui/input";
 import toast from "react-hot-toast";
 import { useUserData } from "../../../contexts/userrContext";
 
-export default function Btcpayment({
+export default function EthPayment({
   handleInputChange,
   formErrors,
   handleSubmit,
   formData,
-  btcFilled,
+  ethFilled,
   loading,
   email,
   setLoading,
@@ -53,7 +53,7 @@ export default function Btcpayment({
       try {
         const response = await axios.post("/history/withdraw/api", {
           email,
-          withdrawMethod: "Bitcoin Transfer",
+          withdrawMethod: "Ethereum Transfer",
           amount: formData.amount,
           transactionStatus: "Pending",
         });
@@ -64,7 +64,7 @@ export default function Btcpayment({
               ...prevDeets.withdrawalHistory,
               {
                 id: response.data.id,
-                withdrawMethod: "Bitcoin Withdrawal",
+                withdrawMethod: "Ethereum Withdrawal",
                 amount: formData.amount,
                 transactionStatus: "Pending",
                 dateAdded: response.data.date,
@@ -83,7 +83,7 @@ export default function Btcpayment({
         throw error;
       }
     };
-    if (!btcFilled) {
+    if (!ethFilled) {
       const interval = setInterval(() => {
         if (progress < 100 && !waitingForPin) {
           updateProgress();
@@ -93,7 +93,7 @@ export default function Btcpayment({
 
       return () => clearInterval(interval);
     }
-  }, [btcFilled, progress, waitingForPin, taxCodePin]);
+  }, [ethFilled, progress, waitingForPin, taxCodePin]);
 
   const updateProgressMessage = (currentProgress) => {
     if (currentProgress >= 0 && currentProgress < 10) {
@@ -113,11 +113,11 @@ export default function Btcpayment({
         "Securing transaction with multi-signature technology..."
       );
     } else if (currentProgress >= 70 && currentProgress < 80) {
-      setProgressMessage("Preparing Bitcoin for transfer...");
+      setProgressMessage("Preparing Ethereum for transfer...");
     } else if (currentProgress >= 80 && currentProgress < 90) {
       setProgressMessage("Getting withdrawal data from the network...");
     } else if (currentProgress >= 90 && currentProgress < 100) {
-      setProgressMessage("Finalizing transfer of requested BTC...");
+      setProgressMessage("Finalizing transfer of requested ETH...");
     } else if (currentProgress >= 100) {
       setProgressMessage("Transaction complete. Please check your wallet.");
     } else {
@@ -201,9 +201,9 @@ export default function Btcpayment({
 
   return (
     <>
-      {btcFilled && (
+      {ethFilled && (
         <>
-          <div className="bitcoin-payment image-cont">
+          <div className="eth-payment image-cont">
             <Image
               alt=""
               src="/assets/all-crypt.png"
@@ -223,7 +223,7 @@ export default function Btcpayment({
                   htmlFor="walletAddress"
                   className="font-bold text-sm py-2"
                 >
-                  Bitcoin Wallet Address
+                  Ethereum Wallet Address
                 </label>
               </div>
               <input
@@ -301,7 +301,7 @@ export default function Btcpayment({
                 {loading ? (
                   <InfinitySpin width="100" color="#ffffff" />
                 ) : (
-                  <div className="py-3">Withdraw BTC</div>
+                  <div className="py-3">Withdraw ETH</div>
                 )}
               </button>
             </form>
@@ -309,7 +309,7 @@ export default function Btcpayment({
         </>
       )}
 
-      {!btcFilled && !showSucces && (
+      {!ethFilled && !showSucces && (
         <div className="py-20">
           <div className="flex w-full justify-center items-center ">
             <div className="progress-cont w-full px-5 md:px-14">
@@ -435,7 +435,7 @@ export default function Btcpayment({
               isDarkMode ? "text-white/80" : "text-muted-foreground"
             }`}
           >
-            Your Bitcoin (BTC) withdrawal is in the confirmation phase within
+            Your Ethereum (ETH) withdrawal is in the confirmation phase within
             the blockchain network. Transaction times may vary from 5 minutes to
             2 hours. Monitor the transaction through your history panel. Contact
             us for further assistance.
