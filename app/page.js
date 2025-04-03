@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <>
       <Script
-        src="//code.tidio.co/mnccv3gt47gdfzv2zyup3gpqu1vqfacp.js"
+        src="//code.jivosite.com/widget/wddL4hWjHH"
         async
       ></Script>
       <Home />
